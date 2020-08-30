@@ -1,0 +1,37 @@
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+/* this is a container of row_poster */
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px; /* put padding between scroll and poster so that it can hover  */
+}
+
+/* keep the functionality but don't show scrollbar */
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row_poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px; /* all posters are touching so use margin right */
+  transition: transform 450ms;
+}
+
+.row_poster:hover {
+  transform: scale(1.08);
+}
+
+.row_posterLarge {
+  max-height: 250px;
+}
+
+.row_posterLarge:hover {
+  transform: scale((1.09));
+}
